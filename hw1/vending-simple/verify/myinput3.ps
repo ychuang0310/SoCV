@@ -1,0 +1,1802 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 0 0 595 841
+%%Title: NovasSoft
+%%CreationDate: Sun Mar 15 14:45:03 2020
+
+%%Creator: NovasSoft
+%%Version: Verdi_N-2017.12
+%%Orientation: Landscape
+%%Pages: 1
+%%DocumentFonts: (atend)
+%%EndComments
+
+%%BeginProlog
+
+/C  {rcurveto}        bind def
+/L  {rlineto}         bind def     % dx dy rlineto
+/X  {0 rlineto}       bind def     % dx 0  rlineto
+/Y  {0 exch rlineto}  bind def     % 0  dy rlineto
+/M  {closepath moveto} bind def
+/N  {newpath moveto} bind def
+/WB {gsave translate dup scale} bind def
+/WE {eofill grestore} bind def
+
+/ww 4096 array def
+/wp 4096 array def
+/wo 4096 array def
+/W {wp exch get exec} bind def
+/WC {wp exch get cvx exec} bind def
+
+/get_word_len {
+/last carray length 1 sub def
+/ratio_acc 0 def
+0 1 last {carray exch get ww exch get ratio_acc add /ratio_acc exch def} for
+/word_len1 ratio_acc SETFONT mul def
+/word_len2 0 def
+/last carray length 1 sub def
+0 1 last { wo exch get word_len2 add /word_len2 exch def } for
+Use_Ratio 1 eq
+{/word_len word_len1 def}
+{/word_len word_len2 def} ifelse
+} def
+
+/cxshow0 { % i
+/i exch def
+cscale nextx nexty WB
+i WC
+eofill grestore
+/cwidth1 SETFONT ww i get mul def
+/cwidth2 wo wo_index get def
+Use_Ratio 1 eq
+{/cwidth cwidth1 def}
+{/cwidth cwidth2 def} ifelse
+/nextx nextx cwidth add def
+/wo_index wo_index 1 add def
+} def
+
+/cxshow { % array x y align
+/Y_Offset exch def /align exch def /cy exch def /cx exch def /carray exch def
+/cscale SETFONT 720 div 0.1 mul def
+/nextx 0 def /nexty 0 def
+gsave
+cx cy translate
+SETANGLE rotate
+0 Y_Offset translate
+get_word_len
+align (CENTER) eq {-0.5 word_len mul 0 translate} if
+align (RIGHT) eq {-1.0 word_len mul 0 translate} if
+/wo_index 0 def
+carray {cxshow0} forall % i
+grestore
+} def
+
+
+%%
+%%
+%% Stipple Data
+%%
+%%
+/patternFont 256 dict def
+patternFont begin
+  /FontType 3 def
+  /FontMatrix [1 0 0 1 0 0] def
+  /FontBBox [0 0 1 1] def
+
+  /Encoding 256 array def
+  0 1 255 {Encoding exch /.notdef put} for
+Encoding
+  dup 0 /0 put
+  dup 1 /1 put
+  dup 2 /2 put
+  dup 3 /3 put
+  dup 4 /4 put
+  dup 5 /5 put
+  dup 6 /6 put
+  dup 7 /7 put
+  dup 8 /8 put
+  dup 9 /9 put
+  dup 10 /10 put
+  dup 11 /11 put
+  dup 12 /12 put
+  dup 13 /13 put
+  dup 14 /14 put
+  dup 15 /15 put
+  dup 16 /16 put
+  dup 17 /17 put
+  dup 18 /18 put
+  dup 19 /19 put
+  dup 20 /20 put
+  dup 21 /21 put
+  dup 22 /22 put
+  dup 23 /23 put
+      23 /23 put
+
+  /BuildChar
+    { 0 begin
+       /char exch def
+       /fontdict exch def
+       /charname fontdict /Encoding get char get def
+
+       1 0 0 0 1 1 setcachedevice
+
+       16 16 true
+       [16 0 0 -16 0 16]
+       PatternArray char 1 getinterval cvx
+       imagemask
+      end
+     }bind def  %% BuildChar
+
+   /BuildChar load 0 6 dict put
+%%   /imagemaskmatrix[25 0 0 -25 0 0]def
+
+end  %% patternFont
+
+/PatternFont patternFont definefont pop
+
+/PatternArray 24 array def
+   PatternArray
+   dup   0   <ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff> put
+   dup   1   <9999666666669999999966666666999999996666666699999999666666669999> put
+   dup   2   <1111222244448888111122224444888811112222444488881111222244448888> put
+   dup   3   <eeeeddddbbbb7777eeeeddddbbbb7777eeeeddddbbbb7777eeeeddddbbbb7777> put
+   dup   4   <8888444422221111888844442222111188884444222211118888444422221111> put
+   dup   5   <7777bbbbddddeeee7777bbbbddddeeee7777bbbbddddeeee7777bbbbddddeeee> put
+   dup   6   <8888444422221111888844442222111188884444222211118888444422221111> put
+   dup   7   <0000000000000000000000000000000000000000000000000000000000000000> put
+   dup   8   <ffff202020202020ffff020202020202ffff202020202020ffff020202020202> put
+   dup   9   <8888555522225555888855552222555588885555222255558888555522225555> put
+   dup   10   <0000202020202020f8f820202020202000000404040404041f1f040404040404> put
+   dup   11   <4444000011110000444400001111000044440000111100004444000011110000> put
+   dup   12   <0000222200008888000022220000888800002222000088880000222200008888> put
+   dup   13   <aaaa5555aaaa55555555aaaa5555aaaaaaaa5555aaaa55555555aaaa5555aaaa> put
+   dup   14   <111111111111ffff111111111111ffff111111111111ffff111111111111ffff> put
+   dup   15   <000000001f1f11111111f1f100000000000000001f1f11111111f1f100000000> put
+   dup   16   <000000000000ffff000000000000ffff000000000000ffff000000000000ffff> put
+   dup   17   <c0c020201818040403038080606010100c0c0202818140403030080806060101> put
+   dup   18   <1111222244448888111122224444888811112222444488881111222244448888> put
+   dup   19   <00000800140022004100ff80000000000000001000280044008201ff00000000> put
+   dup   20   <0404040404043c3c2020202020203c3c0404040404043c3c2020202020203c3c> put
+   dup   21   <2222222222222222222222222222222222222222222222222222222222222222> put
+   dup   22   <8420821042082108208410820842082184208210420821082084108208420821> put
+         23   <8888555522225555888855552222555588885555222255558888555522225555> put
+
+
+
+/ginit
+{initgraphics
+% /Times-Roman findfont charSize scalefont setfont
+ shiftRight shiftDown  translate
+ rotateAngle rotate
+ gsave
+ grestore
+ 0.1 0.1 scale
+ newpath
+ 0 setlinewidth
+} bind def
+
+/greset
+{
+  initgraphics
+} bind def
+
+/disableoutput
+{
+  0 0 0 1 1 1 1 0 0 0 
+  setclip
+}bind def
+
+/rightshow     % 'y' no change
+ {dup stringwidth pop
+  0 exch sub
+  0 rmoveto
+  show
+} bind def
+
+/stringheight
+{
+  gsave                        % save current point
+%  disableoutput
+  (Ag) true charpath           % create "Ag" string path
+  flattenpath pathbbox         % get the string bbox llx, lly, UUx, UUy
+  exch pop exch sub            % discard UUx, calculate (UUy - lly)
+  exch pop                     % discard llx
+  grestore                     % restore current point
+}bind def
+
+/findascend
+{
+  stringheight
+  5 mul 6 div
+}bind def
+
+/finddescend
+{
+  stringheight
+  6 div
+}bind def
+/stringshiftleft
+{
+  dup stringwidth pop      % shift left
+  0 exch sub
+  0 rmoveto
+}bind def
+
+/stringshiftcenterX        % shift center X
+{
+  dup stringwidth pop
+  2 div
+  0 exch sub
+  0 rmoveto
+}bind def
+
+/stringshiftcenterY        % shift center Y
+{
+  stringheight
+  2 div
+  0 exch sub
+  0 exch
+  rmoveto
+}bind def
+
+/stringshiftup
+{
+  finddescend              % y offset is descend (positive, up)
+  0 exch                   % x offset is 0
+  rmoveto
+}bind def
+
+/stringshiftdown
+{
+  findascend 0 exch sub    % y offset is -ascend
+  0 exch                   % x offset is 0
+  rmoveto
+}bind def
+
+/normalshow
+{
+  translate
+  rotate
+  moveto
+  show
+  rotate
+  translate
+}bind def
+
+/rshow
+{
+  translate
+  rotate
+  moveto
+  stringshiftleft
+  show
+  rotate
+  translate
+}bind def
+
+/cshow
+{
+  translate
+  rotate
+  moveto
+  stringshiftcenterX
+  stringshiftcenterY
+  show
+  rotate
+  translate
+}bind def
+
+/lbshow
+ {
+  translate
+  rotate
+  moveto
+  stringshiftup
+  show
+  rotate
+  translate
+} bind def
+
+/lcshow
+ {
+  translate
+  rotate
+  moveto
+  stringshiftcenterY
+  show
+  rotate
+  translate
+} bind def
+
+/ltshow
+ {
+  translate
+  rotate
+  moveto
+  stringshiftdown
+  show
+  rotate
+  translate
+} bind def
+
+/rbshow
+ {
+  translate
+  rotate
+  moveto
+  stringshiftleft
+  stringshiftup
+  show
+  rotate
+  translate
+} bind def
+
+/rcshow
+ {
+  translate
+  rotate
+  moveto
+  stringshiftleft
+  stringshiftcenterY
+  show
+  rotate
+  translate
+} bind def
+
+/rtshow
+ {
+  translate
+  rotate
+  moveto
+  stringshiftleft
+  stringshiftdown
+  show
+  rotate
+  translate
+} bind def
+
+/cbshow
+{
+  translate
+  rotate
+  moveto
+  stringshiftcenterX
+  stringshiftup
+  show
+  rotate
+  translate
+}bind def
+
+/ctshow
+{
+  translate
+  rotate
+  moveto
+  stringshiftcenterX
+  stringshiftdown
+  show
+  rotate
+  translate
+}bind def
+
+/setclip
+{
+newpath
+stroke
+ginit
+moveto
+4 {lineto} repeat
+closepath
+clip
+newpath
+} bind def
+
+/header         % string
+ {
+  moveto    % 8.1
+  dup stringwidth pop
+  2 div
+  0 exch sub
+  0 rmoveto
+  show
+} bind def
+
+/footer         % string
+ {
+  moveto
+  dup stringwidth pop
+  2 div
+  0 exch sub
+  0 rmoveto
+  show
+} bind def
+
+/vshowdict 4 dict def
+/vstring
+{ vshowdict begin
+  /thestring exch def
+  /lineskip exch def
+  thestring
+    {
+      /charcode exch def
+      /thechar ( ) dup 0 charcode put def
+      0 lineskip neg rmoveto
+      gsave
+        thechar stringwidth pop 2 div neg 0 rmoveto
+        thechar show
+      grestore
+    } forall
+  end
+} def
+/vshow
+{
+  moveto
+  vstring
+} bind def
+
+/ptsPath
+{
+   /Num exch def
+   /pt1y exch def
+   /pt1x exch def
+   newpath pt1x pt1y moveto
+   Num 1 sub {/pt2y exch def /pt2x exch def pt2x pt2y lineto} repeat
+}bind def
+
+/arcPath
+{
+    /EndAngle   exch def
+    /StartAngle exch def
+    /Radius     exch def
+    /ScaleH     exch def
+    /ScaleW     exch def
+    /CenterY    exch def
+    /CenterX    exch def
+
+    CenterX CenterY translate ScaleW ScaleH scale 0 0 Radius StartAngle EndAngle arc
+}bind def
+
+/fillWithGray
+{
+   /Color exch def  % Color == 2 means this is a color printer 
+   gsave
+   Color 2 eq {} {Color 1 eq {1 setgray} {Color 3 eq {0 setgray} {0.6 setgray} ifelse} ifelse} ifelse
+   fill
+   grestore
+} bind def
+
+/fillWithPattern{ 
+  gsave
+  clip 
+  /PatternFont findfont 96 scalefont setfont 
+%  IsPatternFont 1 ne {/PatternFont findfont 96 scalefont setfont /IsPatternFont 1 store} if
+%  /str 3 string def 
+  /BBoxLLX BBoxLLX 96 div truncate 96 mul def 
+  /BBoxLLY BBoxLLY 96 div truncate 96 mul def 
+
+  /FillRow BBoxURX BBoxLLX sub cvi 96 idiv 1 add string def 
+
+  0 1 FillRow length 1 sub { FillRow exch PatternChar put} for
+
+  BBoxLLX BBoxLLY 96 BBoxURY { exch dup 3 -1 roll moveto FillRow show } for pop 
+  grestore
+}bind def 
+
+/fillBBox
+{
+   closepath
+   PatternChar 0 eq {Color fillWithGray} {fillWithPattern} ifelse
+}bind def
+
+/fillPath
+{
+   closepath
+   pathbbox
+   /BBoxURY exch store
+   /BBoxURX exch store
+   /BBoxLLY exch store
+   /BBoxLLX exch store
+   PatternChar 0 eq {Color fillWithGray} {fillWithPattern} ifelse
+}bind def
+
+/DPT
+{
+   /pty exch def
+   /ptx exch def
+   ptx pty moveto ptx pty 1 0 0 arc fill
+}bind def
+
+/DL
+{
+   /pt2y exch def
+   /pt2x exch def
+   /pt1y exch def
+   /pt1x exch def
+   newpath pt1x pt1y moveto pt2x pt2y lineto stroke
+}bind def
+
+/DLS
+{
+   ptsPath stroke
+}bind def
+
+/DR
+{
+   /BBoxURY exch def
+   /BBoxURX exch def
+   /BBoxLLY exch def
+   /BBoxLLX exch def
+
+   newpath BBoxLLX BBoxLLY moveto
+   BBoxURX BBoxLLY BBoxURX BBoxURY BBoxLLX BBoxURY 3 {lineto} repeat
+   closepath stroke
+}bind def
+
+/FR
+{
+   /Color exch def
+   /PatternChar exch def
+   /BBoxURY exch def
+   /BBoxURX exch def
+   /BBoxLLY exch def
+   /BBoxLLX exch def
+
+   newpath BBoxLLX BBoxLLY moveto
+   BBoxURX BBoxLLY BBoxURX BBoxURY BBoxLLX BBoxURY 3 {lineto} repeat
+   closepath
+   PatternChar 0 eq {Color fillWithGray} {fillWithPattern} ifelse
+}bind def
+
+/DP
+{
+   ptsPath closepath stroke
+}bind def
+
+/FP
+{
+   /Color exch def
+   /PatternChar exch def
+   ptsPath
+   fillPath
+}bind def
+
+/DA
+{
+    gsave
+    newpath
+    arcPath
+    stroke
+    grestore
+}bind def
+
+/FA
+{
+    /Color exch def
+    /PatternChar exch def
+
+    gsave
+    newpath
+    arcPath
+    fillPath
+    grestore
+}bind def
+
+/SC
+{
+   setrgbcolor
+}bind def
+
+/SLW
+{
+   setlinewidth
+}bind def
+
+/SF
+{
+   /FontSize exch def
+   findfont FontSize scalefont setfont
+   /IsPatternFont 0 store
+}bind def
+
+/SD
+{
+   setdash
+}bind def
+
+
+%
+%
+%%EndProlog
+%
+%
+
+
+
+%%BeginSetup
+%%BeginFeature: *PageSize
+<< /PageSize [595 841] >> setpagedevice
+%%EndFeature
+%%EndSetup
+
+
+/rotateAngle 90 def
+/shiftRight 595 def
+/shiftDown 0 def
+/charSize 10 def
+ginit
+/IsPatternFont 0 store
+0 -1 8419 -1 8419 5953 0 5953 0 -1  setclip
+
+%%Page: 1 1
+180 269 8059 269 8059 5773 180 5773 180 269  setclip
+[] 0 SD
+/Times 99 SF
+newpath
+-4119 -5772 0 (/home/raid7_2/userb05/b05172/SoCV/vending.vcd.fsdb b05172@cad39 Mar 15, 2020 14:45:03) 0 0 0 4119 5772 ctshow
+closepath
+newpath
+-4119 -270 0 (\( 1 - 1 \)) 0 0 0 4119 270 cbshow
+closepath
+newpath
+-8059 -270 0 (Page 1) 0 0 0 8059 270 rbshow
+closepath
+/Times 99 SF
+5 SLW
+/Courier 96 SF
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+5 SLW
+[] 0 SD
+/Courier 95 SF
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+10 SLW
+[] 0 SD
+/Helvetica 95 SF
+264 680 7980 5362 DR
+1100 5361 1100 680 DL
+/Helvetica 95 SF
+newpath
+-277 -5377 0 (Cursor: 50    Marker:0    Delta:-50   x 1ps) 0 0 0 277 5377 lbshow
+closepath
+321 5121 1079 5121 1079 5188 321 5188 321 5121  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-321 -5122 0 (G1) 0 0 0 321 5122 lbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 5056 307 5056 DL
+365 5021 1079 5021 1079 5098 365 5098 365 5021  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -5027 0 (clk) 0 0 0 1079 5027 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4956 307 4956 DL
+365 4921 1079 4921 1079 4998 365 4998 365 4921  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4927 0 (reset) 0 0 0 1079 4927 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4856 307 4856 DL
+365 4821 1079 4821 1079 4898 365 4898 365 4821  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4827 0 (serviceTypeOut) 0 0 0 1079 4827 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4756 307 4756 DL
+365 4721 1079 4721 1079 4798 365 4798 365 4721  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4727 0 (itemTypeIn) 0 0 0 1079 4727 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4656 307 4656 DL
+365 4621 1079 4621 1079 4698 365 4698 365 4621  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4627 0 (inputValue) 0 0 0 1079 4627 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4556 307 4556 DL
+365 4521 1079 4521 1079 4598 365 4598 365 4521  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4527 0 (coinInNTD_1) 0 0 0 1079 4527 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4456 307 4456 DL
+365 4421 1079 4421 1079 4498 365 4498 365 4421  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4427 0 (coinInNTD_5) 0 0 0 1079 4427 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4356 307 4356 DL
+365 4320 1079 4320 1079 4398 365 4398 365 4320  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4326 0 (coinInNTD_10) 0 0 0 1079 4326 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4256 307 4256 DL
+365 4220 1079 4220 1079 4297 365 4297 365 4220  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4226 0 (coinInNTD_50) 0 0 0 1079 4226 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4156 307 4156 DL
+365 4120 1079 4120 1079 4197 365 4197 365 4120  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4126 0 (itemTypeOut) 0 0 0 1079 4126 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 4056 307 4056 DL
+365 4020 1079 4020 1079 4097 365 4097 365 4020  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -4026 0 (coinOutNTD_1) 0 0 0 1079 4026 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3956 307 3956 DL
+365 3920 1079 3920 1079 3997 365 3997 365 3920  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3926 0 (coinOutNTD_5) 0 0 0 1079 3926 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3856 307 3856 DL
+365 3820 1079 3820 1079 3897 365 3897 365 3820  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3826 0 (coinOutNTD_10) 0 0 0 1079 3826 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3756 307 3756 DL
+365 3720 1079 3720 1079 3797 365 3797 365 3720  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3726 0 (coinOutNTD_50) 0 0 0 1079 3726 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3656 307 3656 DL
+365 3620 1079 3620 1079 3697 365 3697 365 3620  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3626 0 (countNTD_1) 0 0 0 1079 3626 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3556 307 3556 DL
+365 3520 1079 3520 1079 3597 365 3597 365 3520  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3526 0 (countNTD_5) 0 0 0 1079 3526 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3456 307 3456 DL
+365 3420 1079 3420 1079 3497 365 3497 365 3420  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3426 0 (countNTD_10) 0 0 0 1079 3426 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3356 307 3356 DL
+365 3320 1079 3320 1079 3397 365 3397 365 3320  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3326 0 (countNTD_50) 0 0 0 1079 3326 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3256 307 3256 DL
+365 3220 1079 3220 1079 3297 365 3297 365 3220  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3226 0 (outExchange) 0 0 0 1079 3226 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3156 307 3156 DL
+365 3120 1079 3120 1079 3197 365 3197 365 3120  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3126 0 (serviceValue) 0 0 0 1079 3126 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 3056 307 3056 DL
+365 3020 1079 3020 1079 3097 365 3097 365 3020  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -3026 0 (p) 0 0 0 1079 3026 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 2955 307 2955 DL
+365 2920 1079 2920 1079 2997 365 2997 365 2920  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -2926 0 (pA) 0 0 0 1079 2926 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 2855 307 2855 DL
+365 2820 1079 2820 1079 2897 365 2897 365 2820  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -2826 0 (pB) 0 0 0 1079 2826 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+329 2755 307 2755 DL
+365 2720 1079 2720 1079 2797 365 2797 365 2720  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-1079 -2726 0 (pC) 0 0 0 1079 2726 rbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+298 5126 298 2755 DL
+321 2630 1079 2630 1079 2697 321 2697 321 2630  setclip
+/Courier 95 SF
+5 SLW
+[] 0 SD
+newpath
+-321 -2631 0 (G2) 0 0 0 321 2631 lbshow
+closepath
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+1101 679 7980 679 7980 5363 1101 5363 1101 679  setclip
+5 SLW
+[] 0 SD
+/PatternFont patternFont definefont pop
+1105 5277 7975 5357 0 0 FR
+/Courier 95 SF
+1105 5277 7975 5357 DR
+/Courier 95 SF
+/Courier 95 SF
+1114 5276 1114 5356 DL
+1233 5276 1233 5296 DL
+1352 5276 1352 5316 DL
+1471 5276 1471 5296 DL
+1590 5276 1590 5316 DL
+1709 5276 1709 5296 DL
+1823 5276 1823 5316 DL
+1942 5276 1942 5296 DL
+2061 5276 2061 5316 DL
+2180 5276 2180 5296 DL
+2299 5276 2299 5356 DL
+2299 5276 2299 5356 DL
+2418 5276 2418 5296 DL
+2537 5276 2537 5316 DL
+2656 5276 2656 5296 DL
+2775 5276 2775 5316 DL
+2894 5276 2894 5296 DL
+3013 5276 3013 5316 DL
+3132 5276 3132 5296 DL
+3246 5276 3246 5316 DL
+3365 5276 3365 5296 DL
+3484 5276 3484 5356 DL
+3484 5276 3484 5356 DL
+3603 5276 3603 5296 DL
+3722 5276 3722 5316 DL
+3841 5276 3841 5296 DL
+3960 5276 3960 5316 DL
+4079 5276 4079 5296 DL
+4198 5276 4198 5316 DL
+4317 5276 4317 5296 DL
+4436 5276 4436 5316 DL
+4555 5276 4555 5296 DL
+4670 5276 4670 5356 DL
+4670 5276 4670 5356 DL
+4789 5276 4789 5296 DL
+4908 5276 4908 5316 DL
+5027 5276 5027 5296 DL
+5146 5276 5146 5316 DL
+5265 5276 5265 5296 DL
+5384 5276 5384 5316 DL
+5503 5276 5503 5296 DL
+5622 5276 5622 5316 DL
+5741 5276 5741 5296 DL
+5860 5276 5860 5356 DL
+5860 5276 5860 5356 DL
+5979 5276 5979 5296 DL
+6093 5276 6093 5316 DL
+6212 5276 6212 5296 DL
+6331 5276 6331 5316 DL
+6450 5276 6450 5296 DL
+6569 5276 6569 5316 DL
+6688 5276 6688 5296 DL
+6807 5276 6807 5316 DL
+6926 5276 6926 5296 DL
+7045 5276 7045 5356 DL
+7045 5276 7045 5356 DL
+7164 5276 7164 5296 DL
+7283 5276 7283 5316 DL
+7402 5276 7402 5296 DL
+7516 5276 7516 5316 DL
+7635 5276 7635 5296 DL
+7754 5276 7754 5316 DL
+7873 5276 7873 5296 DL
+newpath
+-1123 -5267 0 (0) 0 0 0 1123 5267 lbshow
+closepath
+newpath
+-2308 -5267 0 (50) 0 0 0 2308 5267 lbshow
+closepath
+newpath
+-3494 -5267 0 (100) 0 0 0 3494 5267 lbshow
+closepath
+newpath
+-4679 -5267 0 (150) 0 0 0 4679 5267 lbshow
+closepath
+newpath
+-5869 -5267 0 (200) 0 0 0 5869 5267 lbshow
+closepath
+newpath
+-7054 -5267 0 (250) 0 0 0 7054 5267 lbshow
+closepath
+/PatternFont patternFont definefont pop
+1105 685 7975 765 0 0 FR
+/Courier 95 SF
+1105 685 7975 765 DR
+/Courier 95 SF
+/Courier 95 SF
+1149 685 1149 765 DL
+1338 685 1338 705 DL
+1524 685 1524 705 DL
+1713 685 1713 705 DL
+1898 685 1898 705 DL
+2088 685 2088 725 DL
+2277 685 2277 705 DL
+2462 685 2462 705 DL
+2652 685 2652 705 DL
+2841 685 2841 705 DL
+3026 685 3026 765 DL
+3026 685 3026 765 DL
+3216 685 3216 705 DL
+3401 685 3401 705 DL
+3590 685 3590 705 DL
+3780 685 3780 705 DL
+3965 685 3965 725 DL
+4154 685 4154 705 DL
+4344 685 4344 705 DL
+4529 685 4529 705 DL
+4718 685 4718 705 DL
+4903 685 4903 765 DL
+4903 685 4903 765 DL
+5093 685 5093 705 DL
+5282 685 5282 705 DL
+5467 685 5467 705 DL
+5657 685 5657 705 DL
+5846 685 5846 725 DL
+6031 685 6031 705 DL
+6221 685 6221 705 DL
+6406 685 6406 705 DL
+6596 685 6596 705 DL
+6785 685 6785 765 DL
+6785 685 6785 765 DL
+6970 685 6970 705 DL
+7160 685 7160 705 DL
+7349 685 7349 705 DL
+7534 685 7534 705 DL
+7724 685 7724 725 DL
+7909 685 7909 705 DL
+newpath
+-1158 -675 0 (0) 0 0 0 1158 675 lbshow
+closepath
+newpath
+-3035 -675 0 (200) 0 0 0 3035 675 lbshow
+closepath
+newpath
+-4913 -675 0 (400) 0 0 0 4913 675 lbshow
+closepath
+newpath
+-6794 -675 0 (600) 0 0 0 6794 675 lbshow
+closepath
+/PatternFont patternFont definefont pop
+1114 5017 1233 5092 4 0 FR
+1114 5017 1233 5092 DR
+1233 5016 1352 5016 2 DLS
+1352 5017 1352 5092 1471 5092 3 DLS
+1471 5087 1471 5017 1590 5017 3 DLS
+1590 5017 1590 5092 1709 5092 3 DLS
+1709 5087 1709 5017 1824 5017 3 DLS
+1824 5017 1824 5092 1943 5092 3 DLS
+1943 5087 1943 5017 2062 5017 3 DLS
+2062 5017 2062 5092 2181 5092 3 DLS
+2181 5087 2181 5017 2300 5017 3 DLS
+2300 5017 2300 5092 2419 5092 3 DLS
+2419 5087 2419 5017 2538 5017 3 DLS
+2538 5017 2538 5092 2657 5092 3 DLS
+2657 5087 2657 5017 2775 5017 3 DLS
+2775 5017 2775 5092 2894 5092 3 DLS
+2894 5087 2894 5017 3013 5017 3 DLS
+3013 5017 3013 5092 3132 5092 3 DLS
+3132 5087 3132 5017 3247 5017 3 DLS
+3247 5017 3247 5092 3366 5092 3 DLS
+3366 5087 3366 5017 3485 5017 3 DLS
+3485 5017 3485 5092 3604 5092 3 DLS
+3604 5087 3604 5017 3723 5017 3 DLS
+3723 5017 3723 5092 3842 5092 3 DLS
+3842 5087 3842 5017 3961 5017 3 DLS
+3961 5017 3961 5092 4080 5092 3 DLS
+4080 5087 4080 5017 4199 5017 3 DLS
+4199 5017 4199 5092 4318 5092 3 DLS
+4318 5087 4318 5017 4437 5017 3 DLS
+4437 5017 4437 5092 4556 5092 3 DLS
+4556 5087 4556 5017 4670 5017 3 DLS
+4670 5017 4670 5092 4789 5092 3 DLS
+4789 5087 4789 5017 4908 5017 3 DLS
+4908 5017 4908 5092 5027 5092 3 DLS
+5027 5087 5027 5017 5146 5017 3 DLS
+5146 5017 5146 5092 5265 5092 3 DLS
+5265 5087 5265 5017 5384 5017 3 DLS
+5384 5017 5384 5092 5503 5092 3 DLS
+5503 5087 5503 5017 5622 5017 3 DLS
+5622 5017 5622 5092 5741 5092 3 DLS
+5741 5087 5741 5017 5860 5017 3 DLS
+5860 5017 5860 5092 5979 5092 3 DLS
+5979 5087 5979 5017 6094 5017 3 DLS
+6094 5017 6094 5092 6213 5092 3 DLS
+6213 5087 6213 5017 6332 5017 3 DLS
+6332 5017 6332 5092 6451 5092 3 DLS
+6451 5087 6451 5017 6570 5017 3 DLS
+6570 5017 6570 5092 6689 5092 3 DLS
+6689 5087 6689 5017 6808 5017 3 DLS
+6808 5017 6808 5092 6927 5092 3 DLS
+6927 5087 6927 5017 7045 5017 3 DLS
+7045 5017 7045 5092 7164 5092 3 DLS
+7164 5087 7164 5017 7283 5017 3 DLS
+7283 5017 7283 5092 7402 5092 3 DLS
+7402 5087 7402 5017 7517 5017 3 DLS
+7517 5017 7517 5092 7636 5092 3 DLS
+7636 5087 7636 5017 7755 5017 3 DLS
+7755 5017 7755 5092 7874 5092 3 DLS
+7874 5087 7874 5017 7966 5017 3 DLS
+1114 4916 1352 4916 2 DLS
+1352 4917 1352 4992 7966 4992 3 DLS
+1114 4857 1119 4892 1348 4892 1352 4857 1348 4817 
+1119 4817 1114 4857 7 DLS
+/Courier 95 SF
+newpath
+-1220 -4827 0 (0) 0 0 0 1220 4827 lbshow
+closepath
+/Courier 95 SF
+1352 4857 1357 4892 1586 4892 1590 4857 1586 4817 
+1357 4817 1352 4857 7 DLS
+/Courier 95 SF
+newpath
+-1458 -4827 0 (1) 0 0 0 1458 4827 lbshow
+closepath
+/Courier 95 SF
+1590 4857 1595 4892 5380 4892 5384 4857 5380 4817 
+1595 4817 1590 4857 7 DLS
+/Courier 95 SF
+newpath
+-3472 -4827 0 (2) 0 0 0 3472 4827 lbshow
+closepath
+/Courier 95 SF
+5384 4857 5389 4892 5618 4892 5622 4857 5618 4817 
+5389 4817 5384 4857 7 DLS
+/Courier 95 SF
+newpath
+-5490 -4827 0 (0) 0 0 0 5490 4827 lbshow
+closepath
+/Courier 95 SF
+5622 4857 5627 4892 6565 4892 6570 4857 6565 4817 
+5627 4817 5622 4857 7 DLS
+/Courier 95 SF
+newpath
+-6080 -4827 0 (1) 0 0 0 6080 4827 lbshow
+closepath
+/Courier 95 SF
+7966 4892 6574 4892 6570 4857 6574 4817 7966 4817 5 DLS
+/Courier 95 SF
+newpath
+-7253 -4827 0 (2) 0 0 0 7253 4827 lbshow
+closepath
+/Courier 95 SF
+1114 4757 1119 4792 1348 4792 1352 4757 1348 4717 
+1119 4717 1114 4757 7 DLS
+/Courier 95 SF
+newpath
+-1220 -4727 0 (X) 0 0 0 1220 4727 lbshow
+closepath
+/Courier 95 SF
+1352 4757 1357 4792 1586 4792 1590 4757 1586 4717 
+1357 4717 1352 4757 7 DLS
+/Courier 95 SF
+newpath
+-1458 -4727 0 (1) 0 0 0 1458 4727 lbshow
+closepath
+/Courier 95 SF
+1590 4757 1595 4792 6327 4792 6332 4757 6327 4717 
+1595 4717 1590 4757 7 DLS
+/Courier 95 SF
+newpath
+-3948 -4727 0 (0) 0 0 0 3948 4727 lbshow
+closepath
+/Courier 95 SF
+6332 4757 6336 4792 6565 4792 6570 4757 6565 4717 
+6336 4717 6332 4757 7 DLS
+/Courier 95 SF
+newpath
+-6437 -4727 0 (1) 0 0 0 6437 4727 lbshow
+closepath
+/Courier 95 SF
+7966 4792 6574 4792 6570 4757 6574 4717 7966 4717 5 DLS
+/Courier 95 SF
+newpath
+-7253 -4727 0 (0) 0 0 0 7253 4727 lbshow
+closepath
+/Courier 95 SF
+1114 4657 1119 4692 1586 4692 1590 4657 1586 4617 
+1119 4617 1114 4657 7 DLS
+/Courier 95 SF
+newpath
+-1339 -4627 0 (0) 0 0 0 1339 4627 lbshow
+closepath
+/Courier 95 SF
+1590 4657 1595 4692 6565 4692 6570 4657 6565 4617 
+1595 4617 1590 4657 7 DLS
+/Courier 95 SF
+newpath
+-4053 -4627 0 (32) 0 0 0 4053 4627 lbshow
+closepath
+/Courier 95 SF
+7966 4692 6574 4692 6570 4657 6574 4617 7966 4617 5 DLS
+/Courier 95 SF
+newpath
+-7253 -4627 0 (a) 0 0 0 7253 4627 lbshow
+closepath
+/Courier 95 SF
+1114 4557 1119 4592 1348 4592 1352 4557 1348 4517 
+1119 4517 1114 4557 7 DLS
+/Courier 95 SF
+newpath
+-1220 -4527 0 (X) 0 0 0 1220 4527 lbshow
+closepath
+/Courier 95 SF
+1352 4557 1357 4592 1586 4592 1590 4557 1586 4517 
+1357 4517 1352 4557 7 DLS
+/Courier 95 SF
+newpath
+-1458 -4527 0 (0) 0 0 0 1458 4527 lbshow
+closepath
+/Courier 95 SF
+1590 4557 1595 4592 6327 4592 6332 4557 6327 4517 
+1595 4517 1590 4557 7 DLS
+/Courier 95 SF
+newpath
+-3948 -4527 0 (X) 0 0 0 3948 4527 lbshow
+closepath
+/Courier 95 SF
+6332 4557 6336 4592 6565 4592 6570 4557 6565 4517 
+6336 4517 6332 4557 7 DLS
+/Courier 95 SF
+newpath
+-6437 -4527 0 (0) 0 0 0 6437 4527 lbshow
+closepath
+/Courier 95 SF
+7966 4592 6574 4592 6570 4557 6574 4517 7966 4517 5 DLS
+/Courier 95 SF
+newpath
+-7253 -4527 0 (X) 0 0 0 7253 4527 lbshow
+closepath
+/Courier 95 SF
+1114 4457 1119 4492 1348 4492 1352 4457 1348 4417 
+1119 4417 1114 4457 7 DLS
+/Courier 95 SF
+newpath
+-1220 -4427 0 (X) 0 0 0 1220 4427 lbshow
+closepath
+/Courier 95 SF
+1352 4457 1357 4492 1586 4492 1590 4457 1586 4417 
+1357 4417 1352 4457 7 DLS
+/Courier 95 SF
+newpath
+-1458 -4427 0 (0) 0 0 0 1458 4427 lbshow
+closepath
+/Courier 95 SF
+1590 4457 1595 4492 6327 4492 6332 4457 6327 4417 
+1595 4417 1590 4457 7 DLS
+/Courier 95 SF
+newpath
+-3948 -4427 0 (X) 0 0 0 3948 4427 lbshow
+closepath
+/Courier 95 SF
+6332 4457 6336 4492 6565 4492 6570 4457 6565 4417 
+6336 4417 6332 4457 7 DLS
+/Courier 95 SF
+newpath
+-6437 -4427 0 (0) 0 0 0 6437 4427 lbshow
+closepath
+/Courier 95 SF
+7966 4492 6574 4492 6570 4457 6574 4417 7966 4417 5 DLS
+/Courier 95 SF
+newpath
+-7253 -4427 0 (X) 0 0 0 7253 4427 lbshow
+closepath
+/Courier 95 SF
+1114 4357 1119 4392 1348 4392 1352 4357 1348 4316 
+1119 4316 1114 4357 7 DLS
+/Courier 95 SF
+newpath
+-1220 -4326 0 (X) 0 0 0 1220 4326 lbshow
+closepath
+/Courier 95 SF
+1352 4357 1357 4392 1586 4392 1590 4357 1586 4316 
+1357 4316 1352 4357 7 DLS
+/Courier 95 SF
+newpath
+-1458 -4326 0 (0) 0 0 0 1458 4326 lbshow
+closepath
+/Courier 95 SF
+1590 4357 1595 4392 6327 4392 6332 4357 6327 4316 
+1595 4316 1590 4357 7 DLS
+/Courier 95 SF
+newpath
+-3948 -4326 0 (X) 0 0 0 3948 4326 lbshow
+closepath
+/Courier 95 SF
+6332 4357 6336 4392 6565 4392 6570 4357 6565 4316 
+6336 4316 6332 4357 7 DLS
+/Courier 95 SF
+newpath
+-6437 -4326 0 (1) 0 0 0 6437 4326 lbshow
+closepath
+/Courier 95 SF
+7966 4392 6574 4392 6570 4357 6574 4316 7966 4316 5 DLS
+/Courier 95 SF
+newpath
+-7253 -4326 0 (X) 0 0 0 7253 4326 lbshow
+closepath
+/Courier 95 SF
+1114 4256 1119 4291 1348 4291 1352 4256 1348 4216 
+1119 4216 1114 4256 7 DLS
+/Courier 95 SF
+newpath
+-1220 -4226 0 (X) 0 0 0 1220 4226 lbshow
+closepath
+/Courier 95 SF
+1352 4256 1357 4291 1586 4291 1590 4256 1586 4216 
+1357 4216 1352 4256 7 DLS
+/Courier 95 SF
+newpath
+-1458 -4226 0 (1) 0 0 0 1458 4226 lbshow
+closepath
+/Courier 95 SF
+1590 4256 1595 4291 6327 4291 6332 4256 6327 4216 
+1595 4216 1590 4256 7 DLS
+/Courier 95 SF
+newpath
+-3948 -4226 0 (X) 0 0 0 3948 4226 lbshow
+closepath
+/Courier 95 SF
+6332 4256 6336 4291 6565 4291 6570 4256 6565 4216 
+6336 4216 6332 4256 7 DLS
+/Courier 95 SF
+newpath
+-6437 -4226 0 (0) 0 0 0 6437 4226 lbshow
+closepath
+/Courier 95 SF
+7966 4291 6574 4291 6570 4256 6574 4216 7966 4216 5 DLS
+/Courier 95 SF
+newpath
+-7253 -4226 0 (X) 0 0 0 7253 4226 lbshow
+closepath
+/Courier 95 SF
+1114 4156 1119 4191 1586 4191 1590 4156 1586 4116 
+1119 4116 1114 4156 7 DLS
+/Courier 95 SF
+newpath
+-1339 -4126 0 (0) 0 0 0 1339 4126 lbshow
+closepath
+/Courier 95 SF
+1590 4156 1595 4191 4194 4191 4199 4156 4194 4116 
+1595 4116 1590 4156 7 DLS
+/Courier 95 SF
+newpath
+-2881 -4126 0 (1) 0 0 0 2881 4126 lbshow
+closepath
+/Courier 95 SF
+4199 4156 4203 4191 6565 4191 6570 4156 6565 4116 
+4203 4116 4199 4156 7 DLS
+/Courier 95 SF
+newpath
+-5371 -4126 0 (0) 0 0 0 5371 4126 lbshow
+closepath
+/Courier 95 SF
+7966 4191 6574 4191 6570 4156 6574 4116 7966 4116 5 DLS
+/Courier 95 SF
+newpath
+-7253 -4126 0 (1) 0 0 0 7253 4126 lbshow
+closepath
+/Courier 95 SF
+1114 4056 1119 4091 3718 4091 3723 4056 3718 4016 
+1119 4016 1114 4056 7 DLS
+/Courier 95 SF
+newpath
+-2405 -4026 0 (0) 0 0 0 2405 4026 lbshow
+closepath
+/Courier 95 SF
+3723 4056 3727 4091 3956 4091 3961 4056 3956 4016 
+3727 4016 3723 4056 7 DLS
+/Courier 95 SF
+newpath
+-3829 -4026 0 (1) 0 0 0 3829 4026 lbshow
+closepath
+/Courier 95 SF
+3961 4056 3965 4091 4194 4091 4199 4056 4194 4016 
+3965 4016 3961 4056 7 DLS
+/Courier 95 SF
+newpath
+-4067 -4026 0 (2) 0 0 0 4067 4026 lbshow
+closepath
+/Courier 95 SF
+4199 4056 4203 4091 7751 4091 7755 4056 7751 4016 
+4203 4016 4199 4056 7 DLS
+/Courier 95 SF
+newpath
+-5961 -4026 0 (0) 0 0 0 5961 4026 lbshow
+closepath
+/Courier 95 SF
+7966 4091 7759 4091 7755 4056 7759 4016 7966 4016 5 DLS
+/Courier 95 SF
+newpath
+-7847 -4026 0 (1) 0 0 0 7847 4026 lbshow
+closepath
+/Courier 95 SF
+1114 3956 1119 3991 3009 3991 3013 3956 3009 3916 
+1119 3916 1114 3956 7 DLS
+/Courier 95 SF
+newpath
+-2048 -3926 0 (0) 0 0 0 2048 3926 lbshow
+closepath
+/Courier 95 SF
+3013 3956 3018 3991 3243 3991 3247 3956 3243 3916 
+3018 3916 3013 3956 7 DLS
+/Courier 95 SF
+newpath
+-3115 -3926 0 (1) 0 0 0 3115 3926 lbshow
+closepath
+/Courier 95 SF
+3247 3956 3251 3991 4194 3991 4199 3956 4194 3916 
+3251 3916 3247 3956 7 DLS
+/Courier 95 SF
+newpath
+-3710 -3926 0 (2) 0 0 0 3710 3926 lbshow
+closepath
+/Courier 95 SF
+7966 3991 4203 3991 4199 3956 4203 3916 7966 3916 5 DLS
+/Courier 95 SF
+newpath
+-6067 -3926 0 (0) 0 0 0 6067 3926 lbshow
+closepath
+/Courier 95 SF
+1114 3856 1119 3891 2295 3891 2300 3856 2295 3816 
+1119 3816 1114 3856 7 DLS
+/Courier 95 SF
+newpath
+-1691 -3826 0 (0) 0 0 0 1691 3826 lbshow
+closepath
+/Courier 95 SF
+2300 3856 2304 3891 2533 3891 2538 3856 2533 3816 
+2304 3816 2300 3856 7 DLS
+/Courier 95 SF
+newpath
+-2405 -3826 0 (1) 0 0 0 2405 3826 lbshow
+closepath
+/Courier 95 SF
+2538 3856 2542 3891 4194 3891 4199 3856 4194 3816 
+2542 3816 2538 3856 7 DLS
+/Courier 95 SF
+newpath
+-3353 -3826 0 (2) 0 0 0 3353 3826 lbshow
+closepath
+/Courier 95 SF
+7966 3891 4203 3891 4199 3856 4203 3816 7966 3816 5 DLS
+/Courier 95 SF
+newpath
+-6067 -3826 0 (0) 0 0 0 6067 3826 lbshow
+closepath
+/Courier 95 SF
+1114 3756 1119 3791 4432 3791 4437 3756 4432 3716 
+1119 3716 1114 3756 7 DLS
+/Courier 95 SF
+newpath
+-2762 -3726 0 (0) 0 0 0 2762 3726 lbshow
+closepath
+/Courier 95 SF
+4437 3756 4441 3791 5618 3791 5622 3756 5618 3716 
+4441 3716 4437 3756 7 DLS
+/Courier 95 SF
+newpath
+-5014 -3726 0 (1) 0 0 0 5014 3726 lbshow
+closepath
+/Courier 95 SF
+7966 3791 5627 3791 5622 3756 5627 3716 7966 3716 5 DLS
+/Courier 95 SF
+newpath
+-6781 -3726 0 (0) 0 0 0 6781 3726 lbshow
+closepath
+/Courier 95 SF
+1114 3656 1119 3691 1348 3691 1352 3656 1348 3616 
+1119 3616 1114 3656 7 DLS
+/Courier 95 SF
+newpath
+-1220 -3626 0 (0) 0 0 0 1220 3626 lbshow
+closepath
+/Courier 95 SF
+1352 3656 1357 3691 3718 3691 3723 3656 3718 3616 
+1357 3616 1352 3656 7 DLS
+/Courier 95 SF
+newpath
+-2524 -3626 0 (2) 0 0 0 2524 3626 lbshow
+closepath
+/Courier 95 SF
+3723 3656 3727 3691 3956 3691 3961 3656 3956 3616 
+3727 3616 3723 3656 7 DLS
+/Courier 95 SF
+newpath
+-3829 -3626 0 (1) 0 0 0 3829 3626 lbshow
+closepath
+/Courier 95 SF
+3961 3656 3965 3691 4194 3691 4199 3656 4194 3616 
+3965 3616 3961 3656 7 DLS
+/Courier 95 SF
+newpath
+-4067 -3626 0 (0) 0 0 0 4067 3626 lbshow
+closepath
+/Courier 95 SF
+4199 3656 4203 3691 7751 3691 7755 3656 7751 3616 
+4203 3616 4199 3656 7 DLS
+/Courier 95 SF
+newpath
+-5961 -3626 0 (2) 0 0 0 5961 3626 lbshow
+closepath
+/Courier 95 SF
+7966 3691 7759 3691 7755 3656 7759 3616 7966 3616 5 DLS
+/Courier 95 SF
+newpath
+-7847 -3626 0 (1) 0 0 0 7847 3626 lbshow
+closepath
+/Courier 95 SF
+1114 3556 1119 3591 1348 3591 1352 3556 1348 3516 
+1119 3516 1114 3556 7 DLS
+/Courier 95 SF
+newpath
+-1220 -3526 0 (0) 0 0 0 1220 3526 lbshow
+closepath
+/Courier 95 SF
+1352 3556 1357 3591 3009 3591 3013 3556 3009 3516 
+1357 3516 1352 3556 7 DLS
+/Courier 95 SF
+newpath
+-2167 -3526 0 (2) 0 0 0 2167 3526 lbshow
+closepath
+/Courier 95 SF
+3013 3556 3018 3591 3243 3591 3247 3556 3243 3516 
+3018 3516 3013 3556 7 DLS
+/Courier 95 SF
+newpath
+-3115 -3526 0 (1) 0 0 0 3115 3526 lbshow
+closepath
+/Courier 95 SF
+3247 3556 3251 3591 4194 3591 4199 3556 4194 3516 
+3251 3516 3247 3556 7 DLS
+/Courier 95 SF
+newpath
+-3710 -3526 0 (0) 0 0 0 3710 3526 lbshow
+closepath
+/Courier 95 SF
+7966 3591 4203 3591 4199 3556 4203 3516 7966 3516 5 DLS
+/Courier 95 SF
+newpath
+-6067 -3526 0 (2) 0 0 0 6067 3526 lbshow
+closepath
+/Courier 95 SF
+1114 3456 1119 3491 1348 3491 1352 3456 1348 3416 
+1119 3416 1114 3456 7 DLS
+/Courier 95 SF
+newpath
+-1220 -3426 0 (0) 0 0 0 1220 3426 lbshow
+closepath
+/Courier 95 SF
+1352 3456 1357 3491 2295 3491 2300 3456 2295 3416 
+1357 3416 1352 3456 7 DLS
+/Courier 95 SF
+newpath
+-1810 -3426 0 (2) 0 0 0 1810 3426 lbshow
+closepath
+/Courier 95 SF
+2300 3456 2304 3491 2533 3491 2538 3456 2533 3416 
+2304 3416 2300 3456 7 DLS
+/Courier 95 SF
+newpath
+-2405 -3426 0 (1) 0 0 0 2405 3426 lbshow
+closepath
+/Courier 95 SF
+2538 3456 2542 3491 4194 3491 4199 3456 4194 3416 
+2542 3416 2538 3456 7 DLS
+/Courier 95 SF
+newpath
+-3353 -3426 0 (0) 0 0 0 3353 3426 lbshow
+closepath
+/Courier 95 SF
+4199 3456 4203 3491 6565 3491 6570 3456 6565 3416 
+4203 3416 4199 3456 7 DLS
+/Courier 95 SF
+newpath
+-5371 -3426 0 (2) 0 0 0 5371 3426 lbshow
+closepath
+/Courier 95 SF
+7966 3491 6574 3491 6570 3456 6574 3416 7966 3416 5 DLS
+/Courier 95 SF
+newpath
+-7253 -3426 0 (3) 0 0 0 7253 3426 lbshow
+closepath
+/Courier 95 SF
+1114 3356 1119 3391 1348 3391 1352 3356 1348 3316 
+1119 3316 1114 3356 7 DLS
+/Courier 95 SF
+newpath
+-1220 -3326 0 (0) 0 0 0 1220 3326 lbshow
+closepath
+/Courier 95 SF
+1352 3356 1357 3391 1586 3391 1590 3356 1586 3316 
+1357 3316 1352 3356 7 DLS
+/Courier 95 SF
+newpath
+-1458 -3326 0 (2) 0 0 0 1458 3326 lbshow
+closepath
+/Courier 95 SF
+1590 3356 1595 3391 4432 3391 4437 3356 4432 3316 
+1595 3316 1590 3356 7 DLS
+/Courier 95 SF
+newpath
+-3000 -3326 0 (3) 0 0 0 3000 3326 lbshow
+closepath
+/Courier 95 SF
+7966 3391 4441 3391 4437 3356 4441 3316 7966 3316 5 DLS
+/Courier 95 SF
+newpath
+-6186 -3326 0 (2) 0 0 0 6186 3326 lbshow
+closepath
+/Courier 95 SF
+1114 3256 1119 3291 2295 3291 2300 3256 2295 3216 
+1119 3216 1114 3256 7 DLS
+/Courier 95 SF
+newpath
+-1691 -3226 0 (0) 0 0 0 1691 3226 lbshow
+closepath
+/Courier 95 SF
+2300 3256 2304 3291 2533 3291 2538 3256 2533 3216 
+2304 3216 2300 3256 7 DLS
+/Courier 95 SF
+newpath
+-2405 -3226 0 (a) 0 0 0 2405 3226 lbshow
+closepath
+/Courier 95 SF
+2538 3256 2542 3291 3009 3291 3013 3256 3009 3216 
+2542 3216 2538 3256 7 DLS
+/Courier 95 SF
+newpath
+-2749 -3226 0 (14) 0 0 0 2749 3226 lbshow
+closepath
+/Courier 95 SF
+3013 3256 3018 3291 3243 3291 3247 3256 3243 3216 
+3018 3216 3013 3256 7 DLS
+/Courier 95 SF
+newpath
+-3102 -3226 0 (19) 0 0 0 3102 3226 lbshow
+closepath
+/Courier 95 SF
+3247 3256 3251 3291 3718 3291 3723 3256 3718 3216 
+3251 3216 3247 3256 7 DLS
+/Courier 95 SF
+newpath
+-3459 -3226 0 (1e) 0 0 0 3459 3226 lbshow
+closepath
+/Courier 95 SF
+3723 3256 3727 3291 3956 3291 3961 3256 3956 3216 
+3727 3216 3723 3256 7 DLS
+/Courier 95 SF
+newpath
+-3815 -3226 0 (1f) 0 0 0 3815 3226 lbshow
+closepath
+/Courier 95 SF
+3961 3256 3965 3291 4194 3291 4199 3256 4194 3216 
+3965 3216 3961 3256 7 DLS
+/Courier 95 SF
+newpath
+-4053 -3226 0 (20) 0 0 0 4053 3226 lbshow
+closepath
+/Courier 95 SF
+4199 3256 4203 3291 4432 3291 4437 3256 4432 3216 
+4203 3216 4199 3256 7 DLS
+/Courier 95 SF
+newpath
+-4305 -3226 0 (0) 0 0 0 4305 3226 lbshow
+closepath
+/Courier 95 SF
+4437 3256 4441 3291 5618 3291 5622 3256 5618 3216 
+4441 3216 4437 3256 7 DLS
+/Courier 95 SF
+newpath
+-5001 -3226 0 (32) 0 0 0 5001 3226 lbshow
+closepath
+/Courier 95 SF
+5622 3256 5627 3291 7751 3291 7755 3256 7751 3216 
+5627 3216 5622 3256 7 DLS
+/Courier 95 SF
+newpath
+-6675 -3226 0 (0) 0 0 0 6675 3226 lbshow
+closepath
+/Courier 95 SF
+7966 3291 7759 3291 7755 3256 7759 3216 7966 3216 5 DLS
+/Courier 95 SF
+newpath
+-7847 -3226 0 (1) 0 0 0 7847 3226 lbshow
+closepath
+/Courier 95 SF
+1114 3156 1119 3191 1586 3191 1590 3156 1586 3116 
+1119 3116 1114 3156 7 DLS
+/Courier 95 SF
+newpath
+-1339 -3126 0 (0) 0 0 0 1339 3126 lbshow
+closepath
+/Courier 95 SF
+1590 3156 1595 3191 1819 3191 1824 3156 1819 3116 
+1595 3116 1590 3156 7 DLS
+/Courier 95 SF
+newpath
+-1691 -3126 0 (8) 0 0 0 1691 3126 lbshow
+closepath
+/Courier 95 SF
+1824 3156 1828 3191 2295 3191 2300 3156 2295 3116 
+1828 3116 1824 3156 7 DLS
+/Courier 95 SF
+newpath
+-2035 -3126 0 (2a) 0 0 0 2035 3126 lbshow
+closepath
+/Courier 95 SF
+2300 3156 2304 3191 2533 3191 2538 3156 2533 3116 
+2304 3116 2300 3156 7 DLS
+/Courier 95 SF
+newpath
+-2392 -3126 0 (20) 0 0 0 2392 3126 lbshow
+closepath
+/Courier 95 SF
+2538 3156 2542 3191 3009 3191 3013 3156 3009 3116 
+2542 3116 2538 3156 7 DLS
+/Courier 95 SF
+newpath
+-2749 -3126 0 (16) 0 0 0 2749 3126 lbshow
+closepath
+/Courier 95 SF
+3013 3156 3018 3191 3243 3191 3247 3156 3243 3116 
+3018 3116 3013 3156 7 DLS
+/Courier 95 SF
+newpath
+-3102 -3126 0 (11) 0 0 0 3102 3126 lbshow
+closepath
+/Courier 95 SF
+3247 3156 3251 3191 3718 3191 3723 3156 3718 3116 
+3251 3116 3247 3156 7 DLS
+/Courier 95 SF
+newpath
+-3472 -3126 0 (c) 0 0 0 3472 3126 lbshow
+closepath
+/Courier 95 SF
+3723 3156 3727 3191 3956 3191 3961 3156 3956 3116 
+3727 3116 3723 3156 7 DLS
+/Courier 95 SF
+newpath
+-3829 -3126 0 (b) 0 0 0 3829 3126 lbshow
+closepath
+/Courier 95 SF
+3961 3156 3965 3191 4194 3191 4199 3156 4194 3116 
+3965 3116 3961 3156 7 DLS
+/Courier 95 SF
+newpath
+-4067 -3126 0 (a) 0 0 0 4067 3126 lbshow
+closepath
+/Courier 95 SF
+4199 3156 4203 3191 4432 3191 4437 3156 4432 3116 
+4203 3116 4199 3156 7 DLS
+/Courier 95 SF
+newpath
+-4291 -3126 0 (32) 0 0 0 4291 3126 lbshow
+closepath
+/Courier 95 SF
+4437 3156 4441 3191 6565 3191 6570 3156 6565 3116 
+4441 3116 4437 3156 7 DLS
+/Courier 95 SF
+newpath
+-5490 -3126 0 (0) 0 0 0 5490 3126 lbshow
+closepath
+/Courier 95 SF
+6570 3156 6574 3191 6803 3191 6808 3156 6803 3116 
+6574 3116 6570 3156 7 DLS
+/Courier 95 SF
+newpath
+-6675 -3126 0 (8) 0 0 0 6675 3126 lbshow
+closepath
+/Courier 95 SF
+6808 3156 6812 3191 7751 3191 7755 3156 7751 3116 
+6812 3116 6808 3156 7 DLS
+/Courier 95 SF
+newpath
+-7266 -3126 0 (2) 0 0 0 7266 3126 lbshow
+closepath
+/Courier 95 SF
+7966 3191 7759 3191 7755 3156 7759 3116 7966 3116 5 DLS
+/Courier 95 SF
+newpath
+-7847 -3126 0 (1) 0 0 0 7847 3126 lbshow
+closepath
+/Courier 95 SF
+1114 3015 7966 3015 2 DLS
+1114 2915 7966 2915 2 DLS
+1114 2815 7966 2815 2 DLS
+1114 2715 7966 2715 2 DLS
+1114 5356 1114 5276 DL
+[5 15 ] 0 SD
+1114 5261 1114 785 DL
+[] 0 SD
+1149 685 1149 765 DL
+2299 5356 2299 5276 DL
+[5 5 ] 0 SD
+2299 5261 2299 785 DL
+[] 0 SD
+1620 685 1620 765 DL
+180 369 8059 369 8059 5673 180 5673 180 369  setclip
+stroke
+gsave showpage grestore
+greset
+%%EOF
